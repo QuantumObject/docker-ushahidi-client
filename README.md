@@ -19,7 +19,7 @@ To install docker in Ubuntu 14.04 use the commands:
 
 ## Usage
 
-Before you be able to use this container you need first to deploy quantumoject/docker-ushahidi-platform and use the http://ip:port reference of it to _-e platform=ip:port_ for entry for this container. 
+Before you be able to use this container you need first to deploy quantumoject/docker-ushahidi-platform and use the http://ip:port reference of it to _-e platform="http://ip:port"_ for entry for this container. 
 
 To run container use the command below:
 
