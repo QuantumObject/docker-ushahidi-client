@@ -15,6 +15,9 @@ RUN apt-get update && curl -sL https://deb.nodesource.com/setup | sudo bash - \
                     && rm -rf /tmp/* /var/tmp/*  \
                     && rm -rf /var/lib/apt/lists/*
                     
+#General variable definition        
+ENV platform localhost
+
 ##startup scripts  
 #Pre-config scrip that maybe need to be run one time only when the container run the first time .. using a flag to don't 
 #run it again ... use for conf for service ... when run the first time ...
