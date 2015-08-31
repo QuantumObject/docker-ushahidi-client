@@ -8,6 +8,7 @@ MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 RUN echo "deb http://archive.ubuntu.com/ubuntu utopic-backports main restricted " >> /etc/apt/sources.list
 RUN apt-get update && curl -sL https://deb.nodesource.com/setup | sudo bash - \
                                             && apt-get install -y -q build-essential \
+                                            libnotify-bin \
                                             nodejs \
                                             apache2 \  
                                             git-core \
