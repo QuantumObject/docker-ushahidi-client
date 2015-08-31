@@ -23,7 +23,7 @@ Before you be able to use this container you need first to deploy quantumoject/d
 
 To run container use the command below:
 
-    $ docker run -d -p 80 -e platform='ip:port' quantumobject/docker-ushahidi-platform-client
+    $ docker run -d -p 80 -e platform="http://ip_platform:port" quantumobject/docker-ushahidi-platform-client
 
 ## Accessing the Ushahidi Platform Client applications:
 
