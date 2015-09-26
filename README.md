@@ -43,7 +43,7 @@ To access the container from the server that the container is running :
 
 About Ushahidi Platform: [www.ushahidi.com][1]
 
-To help improve this container [quantumobject/docker-ushahidi-platform][5]
+To help improve this container [quantumobject/docker-ushahidi-platform-client][5]
 
 [1]:http://www.ushahidi.com/
 [2]:https://www.docker.com
