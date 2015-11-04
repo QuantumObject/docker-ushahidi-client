@@ -4,7 +4,7 @@ Docker container for [Ushahidi Platform client][3]
 
 "Make smart decisions with a data management system that rapidly collects data from the crowd and visualizes what happened, when and where."
 
-note: quantumobject/docker-ushahidi container  refer to version 2.7.4 that include client and platform together (old version) , for veriosn 3 you need to deploy first the ushhidi-platform (quantumobject/docker-ushahidi-platform container ) and ushhidi-platform-client (quantumobject/docker-ushahidi-platform-client container). 
+note: quantumobject/docker-ushahidi container  refer to version 2.7.4 that include client and platform together (old version) , for version 3 you need to deploy first the ushhidi-platform (quantumobject/docker-ushahidi-platform container ) and ushhidi-platform-client (quantumobject/docker-ushahidi-platform-client container). 
 
 ## Install dependencies
 
@@ -45,8 +45,11 @@ About Ushahidi Platform: [www.ushahidi.com][1]
 
 To help improve this container [quantumobject/docker-ushahidi-platform-client][5]
 
+For additional info about us and our projects check our site [www.quantumobject.com][6]
+
 [1]:http://www.ushahidi.com/
 [2]:https://www.docker.com
 [3]:http://www.ushahidi.com/product/ushahidi/
 [4]:http://docs.docker.com
 [5]:https://github.com/QuantumObject/docker-ushahidi-platform-client
+[6]:http://www.quantumobject.com/
