@@ -10,7 +10,7 @@ note: quantumobject/docker-ushahidi container  refer to version 2.7.4 that inclu
 
   - [Docker][2]
 
-To install docker in Ubuntu 14.04 use the commands:
+To install docker in Ubuntu 15.04 use the commands:
 
     $ sudo apt-get update
     $ wget -qO- https://get.docker.com/ | sh
@@ -38,6 +38,7 @@ The original login/password will be admin/admin please replace password right aw
 To access the container from the server that the container is running :
 
     $ docker exec -it container_id /bin/bash
+    $ export TERM=xterm       #needed to execute some command correctly (nano,top)
 
 ## More Info
 
