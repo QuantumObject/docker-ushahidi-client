@@ -38,7 +38,12 @@ The original login/password will be admin/admin please replace password right aw
 To access the container from the server that the container is running :
 
     $ docker exec -it container_id /bin/bash
-    $ export TERM=xterm       #needed to execute some command correctly (nano,top)
+    
+note: deploy this container behind proxy with SSL :
+
+https://github.com/jwilder/nginx-proxy
+
+https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion
 
 ## More Info
 
@@ -46,11 +51,11 @@ About Ushahidi Platform: [www.ushahidi.com][1]
 
 To help improve this container [quantumobject/docker-ushahidi-platform-client][5]
 
-For additional info about us and our projects check our site [www.quantumobject.com][6]
+For additional info about us and our projects check our site [www.quantumobject.org][6]
 
 [1]:http://www.ushahidi.com/
 [2]:https://www.docker.com
 [3]:http://www.ushahidi.com/product/ushahidi/
 [4]:http://docs.docker.com
 [5]:https://github.com/QuantumObject/docker-ushahidi-platform-client
-[6]:http://www.quantumobject.com/
+[6]:https://www.quantumobject.org/

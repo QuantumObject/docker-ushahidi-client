@@ -1,11 +1,11 @@
 #name of container: docker-ushahidi-platform-client
-#versison of container: 0.2.1
+#version of container: 0.2.2
 FROM quantumobject/docker-baseimage:15.04
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
 #add repository and update the container
 #Installation of nesesary package/software for this containers...
-RUN echo "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc)-backports main restricted " >> /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu `cat /etc/container_environment/DISTRIB_CODENAME`-backports main restricted " >> /etc/apt/sources.list
 RUN apt-get update && curl -sL https://deb.nodesource.com/setup | bash - \
                                             && apt-get install -y -q build-essential \
                                             libnotify-bin \
@@ -32,7 +32,6 @@ RUN mkdir /etc/service/apache2
 COPY apache2.sh /etc/service/apache2/run
 RUN chmod +x /etc/service/apache2/run
 
-
 #add files and script that need to be use for this container
 #include conf file relate to service/daemon 
 #additionsl tools to be use internally
@@ -42,15 +41,9 @@ RUN sed  -i 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/platform-c
 #pre-config scritp for different service that need to be run when container image is create 
 #maybe include additional software that need to be installed ... with some service running ... like example mysqld
 COPY pre-conf.sh /sbin/pre-conf
-RUN chmod +x /sbin/pre-conf \
+RUN chmod +x /sbin/pre-conf; sync \
     && /bin/bash -c /sbin/pre-conf \
     && rm /sbin/pre-conf
-
-##scritp that can be running from the outside using docker-bash tool ...
-## for example to create backup for database with convitation of VOLUME   dockers-bash container_ID backup_mysql
-COPY backup.sh /sbin/backup
-RUN chmod +x /sbin/backup
-VOLUME /var/backups
 
 # to allow access from outside of the container  to the container service
 # at that ports need to allow access from firewall if need to access it outside of the server. 
