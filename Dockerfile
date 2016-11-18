@@ -1,6 +1,6 @@
 #name of container: docker-ushahidi-platform-client
 #version of container: 0.2.3
-FROM quantumobject/docker-baseimage:15.04
+FROM quantumobject/docker-baseimage:15.10
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
 #add repository and update the container
