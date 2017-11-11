@@ -10,10 +10,10 @@ note: quantumobject/docker-ushahidi container  refer to version 2.7.4 that inclu
 
   - [Docker][2]
 
-To install docker in Ubuntu 15.04 use the commands:
+To install docker in Ubuntu 16.04 use the commands:
 
     $ sudo apt-get update
-    $ wget -qO- https://get.docker.com/ | sh
+    $ sudo wget -qO- https://get.docker.com/ | sh
 
  To install docker in other operating systems check [docker online documentation][4]
 

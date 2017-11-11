@@ -1,12 +1,11 @@
 #name of container: docker-ushahidi-platform-client
-#version of container: 0.2.3
-FROM quantumobject/docker-baseimage:15.10
+#version of container: 0.3.1
+FROM quantumobject/docker-baseimage:16.04
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
-#add repository and update the container
-#Installation of nesesary package/software for this containers...
-RUN echo "deb http://archive.ubuntu.com/ubuntu `cat /etc/container_environment/DISTRIB_CODENAME`-backports main restricted " >> /etc/apt/sources.list
-RUN apt-get update && curl -sL https://deb.nodesource.com/setup_6.x | bash - \
+# Update the container
+# Installation of nesesary package/software for this containers...
+RUN apt-get update && curl -sL https://deb.nodesource.com/setup_9.x | bash - \
                                             && apt-get install -y -q build-essential \
                                             libnotify-bin \
                                             nodejs \
