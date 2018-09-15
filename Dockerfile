@@ -5,7 +5,7 @@ MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
 # Update the container
 # Installation of nesesary package/software for this containers...
-RUN apt-get update && curl -sL https://deb.nodesource.com/setup_10.x | bash - \
+RUN apt-get update && curl -sL https://deb.nodesource.com/setup_9.x | bash - \
                                             && DEBIAN_FRONTEND=noninteractive apt-get install -y -q build-essential \
                                             libnotify-bin \
                                             nodejs \
