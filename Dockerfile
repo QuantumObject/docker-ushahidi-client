@@ -1,12 +1,12 @@
 #name of container: docker-ushahidi-platform-client
-#version of container: 0.3.1
-FROM quantumobject/docker-baseimage:16.04
+#version of container: 0.3.2
+FROM quantumobject/docker-baseimage:18.04
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
 # Update the container
 # Installation of nesesary package/software for this containers...
 RUN apt-get update && curl -sL https://deb.nodesource.com/setup_9.x | bash - \
-                                            && apt-get install -y -q build-essential \
+                                            && DEBIAN_FRONTEND=noninteractive apt-get install -y -q build-essential \
                                             libnotify-bin \
                                             nodejs \
                                             apache2 \  

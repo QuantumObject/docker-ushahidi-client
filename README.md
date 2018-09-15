@@ -4,13 +4,13 @@ Docker container for [Ushahidi Platform client][3]
 
 "Make smart decisions with a data management system that rapidly collects data from the crowd and visualizes what happened, when and where."
 
-note: quantumobject/docker-ushahidi container  refer to version 2.7.4 that include client and platform together (old version) , for version 3 you need to deploy first the ushhidi-platform (quantumobject/docker-ushahidi-platform container ) and ushhidi-platform-client (quantumobject/docker-ushahidi-platform-client container). 
+Note: For version 3 you need to deploy first the ushhidi-platform (quantumobject/docker-ushahidi-platform container ) and ushhidi-platform-client (quantumobject/docker-ushahidi-platform-client container). 
 
 ## Install dependencies
 
   - [Docker][2]
 
-To install docker in Ubuntu 16.04 use the commands:
+To install docker in Ubuntu 18.04 use the commands:
 
     $ sudo apt-get update
     $ sudo wget -qO- https://get.docker.com/ | sh

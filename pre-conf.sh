@@ -8,6 +8,7 @@ npm install -g gulp
 npm install
 
 a2enmod rewrite
+a2enmod headers
 rm -R /var/www/html
 
 #to fix error relate to ip address of container apache2
