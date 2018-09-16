@@ -10,6 +10,7 @@ else
         cd /var/www/platform-client
         #need to add .env file with the ushahidi-platform web location.BACKEND_URL=http://myapi.server/
         touch .env
+        echo "NODE_SERVER=true" >> .env
         echo "BACKEND_URL=$PLATFORM" >> .env
         gulp build
         cp /var/www/platform-client/server/rewrite.htaccess /var/www/platform-client/server/www/.htaccess
