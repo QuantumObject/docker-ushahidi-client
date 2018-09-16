@@ -1,10 +1,10 @@
-# docker-ushahidi-platform-client
+# docker-ushahidi-client
 
-Docker container for [Ushahidi Platform client][3]
+Docker container for [Ushahidi client][3]
 
 "Make smart decisions with a data management system that rapidly collects data from the crowd and visualizes what happened, when and where."
 
-Note: For version 3 you need to deploy first the ushhidi-platform (quantumobject/docker-ushahidi-platform container ) and ushhidi-platform-client (quantumobject/docker-ushahidi-platform-client container). 
+Note: For version 3 you need to deploy first the ushhidi-platform (quantumobject/docker-ushahidi-platform container ) and ushhidi-client (quantumobject/docker-ushahidi-client container). 
 
 ## Install dependencies
 
@@ -23,11 +23,11 @@ Before you be able to use this container you need first to deploy quantumoject/d
 
 To run container use the command below:
 
-    $ docker run -d -p 80 -e PLATFORM="http://ip_platform:port" quantumobject/docker-ushahidi-platform-client
+    $ docker run -d -p 80 -e PLATFORM="http://ip_platform:port" quantumobject/docker-ushahidi-client
   
 You need to wait few min for the application to finish installing the client before try to access it.
 
-## Accessing the Ushahidi Platform Client applications:
+## Accessing the Ushahidi Client applications:
 
 After that check with your browser at addresses plus the port assigined by docker for this container :
 
@@ -49,7 +49,7 @@ https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion
 
 About Ushahidi Platform: [www.ushahidi.com][1]
 
-To help improve this container [quantumobject/docker-ushahidi-platform-client][5]
+To help improve this container [quantumobject/docker-ushahidi-client][5]
 
 For additional info about us and our projects check our site [www.quantumobject.org][6]
 
@@ -57,5 +57,5 @@ For additional info about us and our projects check our site [www.quantumobject.
 [2]:https://www.docker.com
 [3]:http://www.ushahidi.com/product/ushahidi/
 [4]:http://docs.docker.com
-[5]:https://github.com/QuantumObject/docker-ushahidi-platform-client
+[5]:https://github.com/QuantumObject/docker-ushahidi-client
 [6]:https://www.quantumobject.org/
