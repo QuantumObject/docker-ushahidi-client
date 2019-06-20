@@ -1,5 +1,5 @@
 #name of container: docker-ushahidi-platform-client
-#version of container: 0.3.2
+#version of container: 0.3.3
 FROM quantumobject/docker-baseimage:18.04
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
