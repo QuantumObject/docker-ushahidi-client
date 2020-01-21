@@ -4,6 +4,7 @@ cd /var/www
 git clone https://github.com/ushahidi/platform-client.git
 
 cd /var/www/platform-client
+git checkout develop
 npm install -g gulp
 npm install
 
