@@ -12,6 +12,9 @@ else
         touch .env
         echo "NODE_SERVER=true" >> .env
         echo "BACKEND_URL=$PLATFORM" >> .env
+        echo "APP_LANGUAGES=en" >> .env
+        echo "OAUTH_CLIENT_ID=ushahidiui" >> .env
+        echo "OAUTH_CLIENT_SECRET=35e7f0bca957836d05ca0492211b0ac707671261" >> .env
         gulp build
         cp /var/www/platform-client/server/rewrite.htaccess /var/www/platform-client/server/www/.htaccess
         
