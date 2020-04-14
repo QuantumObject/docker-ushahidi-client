@@ -23,7 +23,7 @@ Before you be able to use this container you need first to deploy quantumoject/d
 
 To run container use the command below:
 
-    docker run -d -p 80 -e PLATFORM="http://ip_platform:port" --name ushahidi-client quantumobject/docker-ushahidi-client
+    docker run -d -p 80:80 -e PLATFORM="http://ip_platform:port" --name ushahidi-client quantumobject/docker-ushahidi-client
   
 You need to wait few min for the application to finish installing the client before try to access it.
 
@@ -31,7 +31,7 @@ You need to wait few min for the application to finish installing the client bef
 
 After that check with your browser at addresses plus the port assigined by docker for this container :
 
-  - **http://host_ip:port/**
+  - **http://host_ip/**
 
 The original login/password will be admin/admin please replace password right away.  
 
