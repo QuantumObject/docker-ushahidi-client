@@ -12,8 +12,8 @@ Note: For version 3 you need to deploy first the ushhidi-platform (quantumobject
 
 To install docker in Ubuntu 18.04 use the commands:
 
-    $ sudo apt-get update
-    $ sudo wget -qO- https://get.docker.com/ | sh
+    sudo apt-get update
+    sudo wget -qO- https://get.docker.com/ | sh
 
  To install docker in other operating systems check [docker online documentation][4]
 
@@ -23,7 +23,7 @@ Before you be able to use this container you need first to deploy quantumoject/d
 
 To run container use the command below:
 
-    $ docker run -d -p 80 -e PLATFORM="http://ip_platform:port" quantumobject/docker-ushahidi-client
+    docker run -d -p 80 -e PLATFORM="http://ip_platform:port" --name ushahidi-client quantumobject/docker-ushahidi-client
   
 You need to wait few min for the application to finish installing the client before try to access it.
 
@@ -37,7 +37,7 @@ The original login/password will be admin/admin please replace password right aw
 
 To access the container from the server that the container is running :
 
-    $ docker exec -it container_id /bin/bash
+     docker exec -it container_id /bin/bash
     
 note: deploy this container behind proxy with SSL :
 
