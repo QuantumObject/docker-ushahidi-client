@@ -7,7 +7,7 @@ MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 # Installation of nesesary package/software for this containers...
 RUN apt-get update && curl -sL https://deb.nodesource.com/setup_9.x | bash - \
                                             && DEBIAN_FRONTEND=noninteractive apt-get install -y -q build-essential \
-                                            libnotify-bin \
+                                            libnotify-bin unzip \
                                             nodejs \
                                             apache2 \  
                                             git-core \
