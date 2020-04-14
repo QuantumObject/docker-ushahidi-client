@@ -5,15 +5,16 @@
 cd /var/www
 #git clone https://github.com/ushahidi/platform-client.git
 wget https://github.com/ushahidi/platform-client/archive/v4.4.2.zip
-unzip v4.4.2.zip -d  /var/www/platform-client
+unzip v4.4.2.zip -d  /var/www
+mv /var/www/platform-client* /var/www/platform-client
 rm v4.4.2.zip
 
 cd /var/www/platform-client 
 chown -R www-data:www-data /var/www/platform-client  /var/log/apache2
 
 #git checkout develop
-#npm install -g gulp
-#npm install
+npm install -g gulp
+npm install
 
 a2enmod rewrite
 a2enmod headers
