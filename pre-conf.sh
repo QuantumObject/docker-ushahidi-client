@@ -1,10 +1,18 @@
 #!/bin/bash
 
-cd /var/www
-git clone https://github.com/ushahidi/platform-client.git
+#trying to change from git clone to downloading directly from zip ....
 
-cd /var/www/platform-client
-git checkout develop
+cd /var/www
+#git clone https://github.com/ushahidi/platform-client.git
+wget https://github.com/ushahidi/platform-client/archive/v4.4.4.zip
+unzip v4.4.4.zip -d  /var/www
+mv /var/www/platform-client* /var/www/platform-client
+rm v4.4.4.zip
+
+cd /var/www/platform-client 
+chown -R www-data:www-data /var/www/platform-client  /var/log/apache2
+
+#git checkout develop
 npm install -g gulp
 npm install
 
