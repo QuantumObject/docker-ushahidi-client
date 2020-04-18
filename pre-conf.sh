@@ -10,7 +10,7 @@ rm v4.4.4.zip
 # downloaded bundle package for locales
 wget https://github.com/ushahidi/platform-client/releases/download/v4.4.4/ushahidi-platform-client-bundle-v4.4.4.tar.gz
 ver=$(tar -tf ushahidi-platform-client-bundle-v4.4.4.tar.gz | head -n1 | tr -d /)
-tar -xvf ushahidi-platform-client-bundle-v4.4.4.tar.gz && cp -r $ver/. /var/www/platform-client/server
+tar -xvf ushahidi-platform-client-bundle-v4.4.4.tar.gz && cp -r $ver/. /var/www/platform-client/server/www
 rm ushahidi-platform-client-bundle-v4.4.4.tar.gz
 rm -r $ver
 
