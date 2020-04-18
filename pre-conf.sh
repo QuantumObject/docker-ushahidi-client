@@ -13,8 +13,8 @@ cd /var/www/platform-client
 chown -R www-data:www-data /var/www/platform-client  /var/log/apache2
 
 #git checkout develop
-npm install -g gulp
-npm install
+#npm install -g gulp
+#npm install
 
 a2enmod rewrite
 a2enmod headers
