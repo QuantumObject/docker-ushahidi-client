@@ -9,12 +9,18 @@ ver=$(tar -tf ushahidi-platform-client-bundle-v4.4.4.tar.gz | head -n1 | tr -d /
 tar -xvf ushahidi-platform-client-bundle-v4.4.4.tar.gz && mv $ver /var/www/platform-client
 rm ushahidi-platform-client-bundle-v4.4.4.tar.gz
 
+wget https://github.com/ushahidi/platform-client/archive/v4.4.4.zip
+unzip v4.4.4.zip -d  /var/www
+cp -R /var/www/platform-client-4.4.4/. /var/www/platform-client/
+rm v4.4.4.zip
+rm -r platform-client-4.4.4
+
 cd /var/www/platform-client 
 chown -R www-data:www-data /var/www/platform-client  /var/log/apache2
 
 #git checkout develop
-#npm install -g gulp
-#npm install
+npm install -g gulp
+npm install
 
 a2enmod rewrite
 a2enmod headers
