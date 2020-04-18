@@ -1,19 +1,18 @@
 #!/bin/bash
 
-#trying to change from git clone to downloading directly from zip ....
 
+# downloading the last release plus bundle package for locale
 cd /var/www
-#git clone https://github.com/ushahidi/platform-client.git
-wget https://github.com/ushahidi/platform-client/releases/download/v4.4.4/ushahidi-platform-client-bundle-v4.4.4.tar.gz
-ver=$(tar -tf ushahidi-platform-client-bundle-v4.4.4.tar.gz | head -n1 | tr -d /)
-tar -xvf ushahidi-platform-client-bundle-v4.4.4.tar.gz && mv $ver /var/www/platform-client
-rm ushahidi-platform-client-bundle-v4.4.4.tar.gz
-
 wget https://github.com/ushahidi/platform-client/archive/v4.4.4.zip
 unzip v4.4.4.zip -d  /var/www
-cp -R /var/www/platform-client-4.4.4/. /var/www/platform-client/
+mv /var/www/platform-client* /var/www/platform-client
 rm v4.4.4.zip
-rm -r platform-client-4.4.4
+# downloaded bundle package for locales
+wget https://github.com/ushahidi/platform-client/releases/download/v4.4.4/ushahidi-platform-client-bundle-v4.4.4.tar.gz
+ver=$(tar -tf ushahidi-platform-client-bundle-v4.4.4.tar.gz | head -n1 | tr -d /)
+tar -xvf ushahidi-platform-client-bundle-v4.4.4.tar.gz && cp -r $ver/. /var/www/platform-client/server
+rm ushahidi-platform-client-bundle-v4.4.4.tar.gz
+rm -r $ver
 
 cd /var/www/platform-client 
 chown -R www-data:www-data /var/www/platform-client  /var/log/apache2
