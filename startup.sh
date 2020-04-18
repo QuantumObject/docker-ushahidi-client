@@ -16,7 +16,7 @@ else
         echo "OAUTH_CLIENT_ID=ushahidiui" >> .env
         echo "OAUTH_CLIENT_SECRET=$APP_KEY" >> .env
         # gulp build
-        cp /var/www/platform-client/server/rewrite.htaccess /var/www/platform-client/server/www/.htaccess
+        # cp /var/www/platform-client/server/rewrite.htaccess /var/www/platform-client/server/www/.htaccess
         
         #needed for fix problem with ubuntu and cron
         update-locale 
