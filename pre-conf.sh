@@ -12,7 +12,6 @@ wget https://github.com/ushahidi/platform-client/releases/download/v4.4.4/ushahi
 ver=$(tar -tf ushahidi-platform-client-bundle-v4.4.4.tar.gz | head -n1 | tr -d /)
 tar -xvf ushahidi-platform-client-bundle-v4.4.4.tar.gz && cp -r $ver/. /var/www/platform-client/server/www
 rm ushahidi-platform-client-bundle-v4.4.4.tar.gz
-rm -r $ver
 
 cd /var/www/platform-client 
 chown -R www-data:www-data /var/www/platform-client  /var/log/apache2
