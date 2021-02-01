@@ -3,15 +3,15 @@
 
 # downloading the last release plus bundle package for locale
 cd /var/www
-wget https://github.com/ushahidi/platform-client/archive/v4.4.4.zip
-unzip v4.4.4.zip -d  /var/www
+wget https://github.com/ushahidi/platform-client/archive/v5.0.15.zip
+unzip v5.0.15.zip -d  /var/www
 mv /var/www/platform-client* /var/www/platform-client
-rm v4.4.4.zip
+rm v5.0.15.zip
 # downloading bundle package for locales
-wget https://github.com/ushahidi/platform-client/releases/download/v4.4.4/ushahidi-platform-client-bundle-v4.4.4.tar.gz
-ver=$(tar -tf ushahidi-platform-client-bundle-v4.4.4.tar.gz | head -n1 | tr -d /)
-tar -xvf ushahidi-platform-client-bundle-v4.4.4.tar.gz && cp -r $ver/. /var/www/platform-client/server/www
-rm ushahidi-platform-client-bundle-v4.4.4.tar.gz
+wget https://github.com/ushahidi/platform-client/releases/download/v5.0.15/ushahidi-platform-client-bundle-v5.0.15.tar.gz
+ver=$(tar -tf ushahidi-platform-client-bundle-v5.0.15.tar.gz | head -n1 | tr -d /)
+tar -xvf ushahidi-platform-client-bundle-v5.0.15.tar.gz && cp -r $ver/. /var/www/platform-client/server/www
+rm ushahidi-platform-client-bundle-v5.0.15.tar.gz
 
 cd /var/www/platform-client 
 chown -R www-data:www-data /var/www/platform-client  /var/log/apache2
